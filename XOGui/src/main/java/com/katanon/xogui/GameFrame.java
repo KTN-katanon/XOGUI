@@ -21,6 +21,7 @@ public class GameFrame extends javax.swing.JFrame {
         o = new Player('O');
         x = new Player('X');
         board = new Board(x, o);
+        showTurn();
         load();
     }
     
@@ -37,6 +38,11 @@ public class GameFrame extends javax.swing.JFrame {
         btn9.setText("" + board[2][2]);
     }
     
+    
+    public void showTurn(){
+        Player currentPlayer = board.getCurrentPlayer();
+        lblStatus.setText("Turn " + currentPlayer.getSymbol());
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
