@@ -54,8 +54,8 @@ public class GameFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btn1 = new javax.swing.JButton();
-        btn3 = new javax.swing.JButton();
         btn2 = new javax.swing.JButton();
+        btn3 = new javax.swing.JButton();
         btn4 = new javax.swing.JButton();
         btn5 = new javax.swing.JButton();
         btn6 = new javax.swing.JButton();
@@ -82,29 +82,69 @@ public class GameFrame extends javax.swing.JFrame {
             }
         });
 
-        btn3.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        btn3.setText("-");
-
         btn2.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btn2.setText("-");
+        btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2ActionPerformed(evt);
+            }
+        });
+
+        btn3.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        btn3.setText("-");
+        btn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3ActionPerformed(evt);
+            }
+        });
 
         btn4.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btn4.setText("-");
+        btn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4ActionPerformed(evt);
+            }
+        });
 
         btn5.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btn5.setText("-");
+        btn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn5ActionPerformed(evt);
+            }
+        });
 
         btn6.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btn6.setText("-");
+        btn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn6ActionPerformed(evt);
+            }
+        });
 
         btn7.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btn7.setText("-");
+        btn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn7ActionPerformed(evt);
+            }
+        });
 
         btn8.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btn8.setText("-");
+        btn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn8ActionPerformed(evt);
+            }
+        });
 
         btn9.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btn9.setText("-");
+        btn9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn9ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -270,6 +310,46 @@ public class GameFrame extends javax.swing.JFrame {
         board.setRowCol(0, 0);
         showBoard();
     }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        board.setRowCol(0, 1);
+        showBoard();
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+        board.setRowCol(0, 2);
+        showBoard();
+    }//GEN-LAST:event_btn3ActionPerformed
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+        board.setRowCol(1, 0);
+        showBoard();
+    }//GEN-LAST:event_btn4ActionPerformed
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+        board.setRowCol(1, 1);
+        showBoard();
+    }//GEN-LAST:event_btn5ActionPerformed
+
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
+        board.setRowCol(1, 2);
+        showBoard();
+    }//GEN-LAST:event_btn6ActionPerformed
+
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+        board.setRowCol(2, 0);
+        showBoard();
+    }//GEN-LAST:event_btn7ActionPerformed
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+        board.setRowCol(2, 1);
+        showBoard();
+    }//GEN-LAST:event_btn8ActionPerformed
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
+        board.setRowCol(2, 2);
+        showBoard();
+    }//GEN-LAST:event_btn9ActionPerformed
 
     /**
      * @param args the command line arguments
