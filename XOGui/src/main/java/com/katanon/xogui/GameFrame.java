@@ -10,11 +10,18 @@ package com.katanon.xogui;
  */
 public class GameFrame extends javax.swing.JFrame {
 
+    private final Player o;
+    private final Player x;
+    private final Board board;
     /**
      * Creates new form GameFrame
      */
     public GameFrame() {
         initComponents();
+        o = new Player('O');
+        x = new Player('X');
+        board = new Board(x, o);
+        load();
     }
 
     /**
@@ -289,4 +296,8 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel lblStatus;
     // End of variables declaration//GEN-END:variables
+
+    private void load() {
+        
+    }
 }
