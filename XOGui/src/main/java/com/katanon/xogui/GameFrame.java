@@ -308,12 +308,6 @@ public class GameFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        row = 0;
-        col = 0;
-        process();
-    }//GEN-LAST:event_btn1ActionPerformed
-
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         row = 0;
         col = 1;
@@ -361,14 +355,32 @@ public class GameFrame extends javax.swing.JFrame {
         col = 2;
         process();
     }//GEN-LAST:event_btn9ActionPerformed
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        row = 0;
+        col = 0;
+        process();
+    }//GEN-LAST:event_btn1ActionPerformed
     
     public void process(){
         board.setRowCol(row, col);
         showBoard();
+        if(board.results()){
+            doFinish();
+            return;
+        }
         board.switchTurn();
         showTurn();
     }
     
+    public void doFinish(){
+        if(board.isBoardFull()){
+            lblStatus.setText("Draw !!!");
+        } else {
+            lblStatus.setText("" + board.getCurrentPlayer().getSymbol() + " Win!!!");
+        }
+    } 
+   
     /**
      * @param args the command line arguments
      */
@@ -403,7 +415,7 @@ public class GameFrame extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn1;
     private javax.swing.JButton btn2;
