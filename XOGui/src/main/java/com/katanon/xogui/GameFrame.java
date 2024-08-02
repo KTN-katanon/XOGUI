@@ -379,8 +379,21 @@ public class GameFrame extends javax.swing.JFrame {
         } else {
             lblStatus.setText("" + board.getCurrentPlayer().getSymbol() + " Win!!!");
         }
+        setEnableBoard(false);
     } 
-   
+    
+    public void setEnableBoard(boolean isEnable){
+        btn1.setEnabled(isEnable);
+        btn2.setEnabled(isEnable);
+        btn3.setEnabled(isEnable);
+        btn4.setEnabled(isEnable);
+        btn5.setEnabled(isEnable);
+        btn6.setEnabled(isEnable);
+        btn7.setEnabled(isEnable);
+        btn8.setEnabled(isEnable);
+        btn9.setEnabled(isEnable);
+    }
+    
     /**
      * @param args the command line arguments
      */
