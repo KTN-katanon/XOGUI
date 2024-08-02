@@ -13,6 +13,8 @@ public class GameFrame extends javax.swing.JFrame {
     private final Player o;
     private final Player x;
     private final Board board;
+    private int col;
+    private int row;
     /**
      * Creates new form GameFrame
      */
@@ -307,50 +309,66 @@ public class GameFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        board.setRowCol(0, 0);
-        showBoard();
+        row = 0;
+        col = 0;
+        process();
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        board.setRowCol(0, 1);
-        showBoard();
+        row = 0;
+        col = 1;
+        process();
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-        board.setRowCol(0, 2);
-        showBoard();
+        row = 0;
+        col = 2;
+        process();
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        board.setRowCol(1, 0);
-        showBoard();
+        row = 1;
+        col = 0;
+        process();
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        board.setRowCol(1, 1);
-        showBoard();
+        row = 1;
+        col = 1;
+        process();
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-        board.setRowCol(1, 2);
-        showBoard();
+        row = 1;
+        col = 2;
+        process();
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-        board.setRowCol(2, 0);
-        showBoard();
+        row = 2;
+        col = 0;
+        process();
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-        board.setRowCol(2, 1);
-        showBoard();
+        row = 2;
+        col = 1;
+        process();
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-        board.setRowCol(2, 2);
-        showBoard();
+        row = 2;
+        col = 2;
+        process();
     }//GEN-LAST:event_btn9ActionPerformed
-
+    
+    public void process(){
+        board.setRowCol(row, col);
+        showBoard();
+        board.switchTurn();
+        showTurn();
+    }
+    
     /**
      * @param args the command line arguments
      */
