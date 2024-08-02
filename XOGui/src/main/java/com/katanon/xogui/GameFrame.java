@@ -23,7 +23,20 @@ public class GameFrame extends javax.swing.JFrame {
         board = new Board(x, o);
         load();
     }
-
+    
+    public void showBoard(){
+        char[][] board  = this.board.getBoard();
+        btn1.setText("" + board[0][0]);
+        btn2.setText("" + board[0][1]);
+        btn3.setText("" + board[0][2]);
+        btn4.setText("" + board[1][0]);
+        btn5.setText("" + board[1][1]);
+        btn6.setText("" + board[1][2]);
+        btn7.setText("" + board[2][0]);
+        btn8.setText("" + board[2][1]);
+        btn9.setText("" + board[2][2]);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
