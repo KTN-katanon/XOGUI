@@ -248,6 +248,11 @@ public class GameFrame extends javax.swing.JFrame {
 
         btnClose.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnClose.setText("Close");
+        btnClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCloseActionPerformed(evt);
+            }
+        });
 
         btnNewGame.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnNewGame.setText("New Game");
@@ -369,6 +374,10 @@ public class GameFrame extends javax.swing.JFrame {
         setEnableBoard(true);
         load();
     }//GEN-LAST:event_btnNewGameActionPerformed
+
+    private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCloseActionPerformed
     
     public void process(){
         board.setRowCol(row, col);
