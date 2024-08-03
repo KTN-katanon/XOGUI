@@ -557,4 +557,13 @@ public class GameFrame extends javax.swing.JFrame {
         showTurn();
         btnNewGame.setEnabled(false);
     }
+    
+    private void showPlayerinfo(){
+        lblXWin.setText("Win: " + x.getWinCount());
+        lblXDraw.setText("Draw: " + x.getDrawCount());
+        lblXLose.setText("Lose: " + x.getLoseCount());
+        lblOWin.setText("Win: " + o.getWinCount());
+        lblODraw.setText("Draw: " + o.getDrawCount());
+        lblOLose.setText("Lose: " + o.getLoseCount());
+    }
 }
