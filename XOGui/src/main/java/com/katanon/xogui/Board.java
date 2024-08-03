@@ -122,7 +122,7 @@ public class Board {
             if (currentPlayer == p1) {
                 p1.incWinCount();
                 p2.incLoseCount();
-            } else if (currentPlayer == p1) {
+            } else if (currentPlayer == p2) {
                 p2.incWinCount();
                 p1.incLoseCount();
             } else {

@@ -466,6 +466,8 @@ public class GameFrame extends javax.swing.JFrame {
     }
     
     public void doFinish(){
+        board.updateStat();
+        showPlayerinfo();
         if(board.isBoardFull()){
             lblStatus.setText("Draw !!!");
         } else {
