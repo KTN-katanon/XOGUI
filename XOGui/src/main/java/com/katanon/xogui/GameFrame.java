@@ -12,7 +12,7 @@ public class GameFrame extends javax.swing.JFrame {
 
     private final Player o;
     private final Player x;
-    private final Board board;
+    private Board board;
     private int col;
     private int row;
     /**
@@ -22,8 +22,6 @@ public class GameFrame extends javax.swing.JFrame {
         initComponents();
         o = new Player('O');
         x = new Player('X');
-        board = new Board(x, o);
-        showTurn();
         load();
     }
     
@@ -253,6 +251,11 @@ public class GameFrame extends javax.swing.JFrame {
 
         btnNewGame.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnNewGame.setText("New Game");
+        btnNewGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNewGameActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -361,6 +364,11 @@ public class GameFrame extends javax.swing.JFrame {
         col = 0;
         process();
     }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btnNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewGameActionPerformed
+        setEnableBoard(true);
+        load();
+    }//GEN-LAST:event_btnNewGameActionPerformed
     
     public void process(){
         board.setRowCol(row, col);
@@ -380,6 +388,7 @@ public class GameFrame extends javax.swing.JFrame {
             lblStatus.setText("" + board.getCurrentPlayer().getSymbol() + " Win!!!");
         }
         setEnableBoard(false);
+        btnNewGame.setEnabled(true);
     } 
     
     public void setEnableBoard(boolean isEnable){
@@ -450,6 +459,10 @@ public class GameFrame extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void load() {
-        
+        btnNewGame.setEnabled(false);
+        board = new Board(x, o);
+        showBoard();
+        showTurn();
+        btnNewGame.setEnabled(false);
     }
 }
