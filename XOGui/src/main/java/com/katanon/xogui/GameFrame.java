@@ -69,6 +69,10 @@ public class GameFrame extends javax.swing.JFrame {
         lblXDraw = new javax.swing.JLabel();
         lblXLose = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
+        lblOPlayer = new javax.swing.JLabel();
+        lblOWin = new javax.swing.JLabel();
+        lblODraw = new javax.swing.JLabel();
+        lblOLose = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         lblStatus = new javax.swing.JLabel();
         btnClose = new javax.swing.JButton();
@@ -246,15 +250,47 @@ public class GameFrame extends javax.swing.JFrame {
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 204));
 
+        lblOPlayer.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblOPlayer.setText("O Player");
+
+        lblOWin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblOWin.setText("Win: 0");
+
+        lblODraw.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblODraw.setText("Draw: 0");
+
+        lblOLose.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblOLose.setText("Lose: 0");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblOPlayer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblOWin)
+                            .addComponent(lblODraw)
+                            .addComponent(lblOLose))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(80, 80, 80))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 165, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblOPlayer, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblOWin)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblODraw)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblOLose)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -503,6 +539,10 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel lblODraw;
+    private javax.swing.JLabel lblOLose;
+    private javax.swing.JLabel lblOPlayer;
+    private javax.swing.JLabel lblOWin;
     private javax.swing.JLabel lblStatus;
     private javax.swing.JLabel lblXDraw;
     private javax.swing.JLabel lblXLose;
